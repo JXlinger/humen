@@ -1,0 +1,4 @@
+page {
+	font-size: 28rpx;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

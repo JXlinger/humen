@@ -1,0 +1,33 @@
+<view class="creat">
+	<view class="mask" style="transform: {{ maskLeft }};">
+		<view class="close_ico" bindtap="closeMaskHandle">
+			<image src="../../static/ico/close.png" mode="widthFix"></image>
+		</view>
+		<view class="input" wx:if="{{ !mask }}">
+			<textarea
+			value="{{inputValue}}"
+			auto-focus="{{ !mask }}"
+			maxlength="90"
+			fixed 
+			placeholder-style="color: #949494;font-size: 13px;"
+			style="height: 250rpx;"
+			placeholder="输入我在人间凑数的日子,最多90字"
+			show-confirm-bar
+			bindinput="bindInputHandle"
+			/>
+		</view>
+		<view bindtap="saveTextObject" wx:if="{{ !mask }}" class="input_btn">生成我在人间凑数的日子</view>
+	</view>
+	<view class="canvas" style="transform: {{ !mask ? 'translateX(' + (systemInfo.windowWidth + 20) + 'px)' : 'translateX(0px) ' }}">
+		<canvas canvas-id="drawCanvas" style="width: 100%;height: 100%;border-radius: 12px;display: {{ !mask ? 'none' : 'block' }};"></canvas>
+	</view>
+	<view class="handle">
+		<button bindtap="changeTextHandle" loading="{{btnLoading}}" hover-class="button-hover">换文案</button>
+		<button bindtap="customTextHandle">自定义</button>
+	</view>
+	<view class="save_hand">
+		<view bindtap="saveImgToFile"><image src="../../static/ico/xiazai.png" mode="widthFix"></image></view>
+		<view><button open-type="share" data-index="wx"></button><image src="../../static/ico/weixin.png" mode="widthFix"></image></view>
+		<view bindtap="sharePyq"><image src="../../static/ico/friend.png" mode="widthFix"></image></view>
+	</view>
+</view>

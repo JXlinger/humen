@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="index">
+	<image src="../../static/img/mo.png" mode="widthFix"></image>
+	<view class="text">
+		<view class="first">{{ writeText.first }}</view>
+		<view class="next">
+			{{ writeText.next }}
+			<view class="from">——我在人间凑数的日子</view>
+		</view>
+	</view>
+</view>
+<view class="tips">
+	<image mode="widthFix" src="../../static/ico/arrow_dowm.png"></image>
+</view>
+<view class="generate">我在人间凑数的日子
+	<view>
+		<image mode="widthFix" src="../../static/img/line.png"></image>
+	</view>
+	<button open-type="getUserInfo" bindgetuserinfo="toCreatCanvas">授权</button>
+</view>
+<view class="chage_text" bindtap="changeTextHandle">换标语</view>
+<view class="share">
+	<view class="wxmp"><image src="../../static/ico/share_ico.png" mode="widthFix"></image><button open-type="share">分享</button></view>
+</view>
+<view class="showtime">
+	
+</view>
+
+

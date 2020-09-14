@@ -1,0 +1,166 @@
+page {
+  background-color: #313131;
+  position: relative;
+  height: 100%;
+}
+@keyframes Shans {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.index {
+  width: 100%;
+  padding-top: 100rpx;
+}
+.index image {
+  display: block;
+  width: 360rpx;
+  height: 1600rpx;
+  margin: 50rpx auto 0;
+  animation: Shans 5s linear infinite;
+}
+.index .text {
+  display: flex;
+  padding: 30rpx 50rpx;
+  height: 350rpx;
+  animation: Shans 7s linear infinite;
+}
+.index .text .first {
+  width: 100rpx;
+  font-size: 80rpx;
+  font-weight: 700;
+  color: #ffffff;
+}
+.index .text .next {
+  font-size: 30rpx;
+  color: #ffffff;
+  margin: 40rpx 0 0 8rpx;
+  line-height: 45rpx;
+}
+.index .text .next .from {
+  text-align: end;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.tips {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 30rpx auto 0;
+  animation: arrowDown 1s linear infinite;
+}
+.tips image {
+  width: 100%;
+}
+@keyframes arrowDown {
+  0% {
+    transform: translateY(30px);
+  }
+  30% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(20px);
+  }
+  80% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+.generate {
+  width: 65%;
+  line-height: 76rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  text-align: center;
+  margin: 100rpx auto 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+}
+.generate view {
+  width: 200rpx;
+  height: 100rpx;
+  position: absolute;
+  top: -50rpx;
+  transform: rotate(8deg);
+  animation: btnDh 5s ease-in infinite;
+}
+.generate view image {
+  width: 100%;
+}
+.generate button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100% !important;
+  height: 100% !important;
+  background: none !important;
+  font-size: 0;
+}
+.chage_text {
+  display: table;
+  padding: 20rpx;
+  margin: 50rpx auto 0;
+  color: #ffffff;
+  font-size: 30rpx;
+  text-align: center;
+}
+@keyframes btnDh {
+  0% {
+    left: -150rpx;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -150rpx;
+  }
+}
+.share {
+  display: flex;
+  margin: 50rpx 0 0;
+}
+.share .wxmp {
+  width: 72rpx;
+  height: 72rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.share .wxmp image {
+  width: 100%;
+}
+.share .wxmp button {
+  border-radius: 50% !important;
+  background: none;
+  position: absolute;
+  font-size: 0;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+}
